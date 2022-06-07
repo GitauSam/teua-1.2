@@ -1,11 +1,9 @@
 package com.zenza.teua.domain.data
 
-import lombok.Builder
 import java.time.LocalDateTime
 
-@Builder
-data class County(
-    var id: Long? = null,
+data class Ward(
+    val id: Long? = null,
     var name: String? = null,
     var status: Int? = null,
     var createdAt: LocalDateTime? = null,
