@@ -1,13 +1,13 @@
 package com.zenza.teua.domain.data
 
-import lombok.Builder
 import java.time.LocalDateTime
 
-@Builder
-data class County(
+data class Leader(
     var id: Long? = null,
-    var name: String? = null,
-    var country: Country? = null,
+    var firstName: String? = null,
+    var middleName: String? = null,
+    var lastName: String? = null,
+    var dateOfBirth: LocalDateTime? = null,
     var status: Int? = null,
     var createdAt: LocalDateTime? = null,
     var createdBy: String? = "admin",

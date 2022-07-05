@@ -3,7 +3,7 @@ package com.zenza.teua.domain.data
 import java.time.LocalDateTime
 
 data class Country(
-    val id: Long? = null,
+    var id: Long? = null,
     var name: String? = null,
     var status: Int? = null,
     var createdAt: LocalDateTime? = null,

@@ -3,8 +3,9 @@ package com.zenza.teua.domain.data
 import java.time.LocalDateTime
 
 data class Ward(
-    val id: Long? = null,
+    var id: Long? = null,
     var name: String? = null,
+    var county: County? = null,
     var status: Int? = null,
     var createdAt: LocalDateTime? = null,
     var createdBy: String? = "admin",
