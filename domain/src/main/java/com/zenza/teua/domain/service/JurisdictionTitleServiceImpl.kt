@@ -20,7 +20,7 @@ class JurisdictionTitleServiceImpl(
         return getJurisdictionTitleByIdUseCase.get(jurisdictionTitleId)
     }
 
-    override fun getAllJurisdictionTitles(): List<JurisdictionTitle?> {
+    override fun getAllJurisdictionTitles(): List<JurisdictionTitle> {
         return getAllJurisdictionTitlesUseCase.get()
     }
 }

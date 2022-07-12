@@ -9,8 +9,8 @@ import com.zenza.teua.domain.usecases.impl.users.GetUserByIdUseCaseImpl
 import com.zenza.teua.domain.usecases.interfaces.users.CreateUserUseCase
 import com.zenza.teua.domain.usecases.interfaces.users.GetAllUsersUseCase
 import com.zenza.teua.domain.usecases.interfaces.users.GetUserByIdUseCase
-import com.zenza.teua.infrastructure.adapters.UserEntityJpaAdapter
-import com.zenza.teua.infrastructure.repository.UserEntityRepository
+import com.zenza.teua.infrastructure.persistence.adapters.UserEntityJpaAdapter
+import com.zenza.teua.infrastructure.persistence.repository.UserEntityRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

@@ -8,5 +8,5 @@ interface JurisdictionTitleServicePort {
 
     fun getJurisdictionTitleById(jurisdictionTitleId: Int): JurisdictionTitle?
 
-    fun getAllJurisdictionTitles(): List<JurisdictionTitle?>
+    fun getAllJurisdictionTitles(): List<JurisdictionTitle>
 }

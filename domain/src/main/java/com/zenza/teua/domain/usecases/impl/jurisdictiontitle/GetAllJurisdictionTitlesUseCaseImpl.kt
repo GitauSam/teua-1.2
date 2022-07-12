@@ -8,7 +8,7 @@ class GetAllJurisdictionTitlesUseCaseImpl(
     private val jurisdictionTitlePersistencePort: JurisdictionTitlePersistencePort
 ): GetAllJurisdictionTitlesUseCase {
 
-    override fun get(): List<JurisdictionTitle?> {
+    override fun get(): List<JurisdictionTitle> {
         return jurisdictionTitlePersistencePort.getAllJurisdictionTitles()
     }
 }

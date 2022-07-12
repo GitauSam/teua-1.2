@@ -6,7 +6,7 @@ interface LeaderPersistencePort {
 
     fun createLeader(leader: Leader): Leader
 
-    fun getLeaders(): List<Leader?>
+    fun getLeaders(): List<Leader>
 
     fun getLeaderById(leaderId: Long): Leader?
 }

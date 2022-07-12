@@ -8,7 +8,7 @@ class GetAllLeaderUseCaseImpl(
     private val leaderPersistencePort: LeaderPersistencePort
 ): GetAllLeadersUseCase {
 
-    override fun get(): List<Leader?> {
+    override fun get(): List<Leader> {
         return leaderPersistencePort.getLeaders()
     }
 }

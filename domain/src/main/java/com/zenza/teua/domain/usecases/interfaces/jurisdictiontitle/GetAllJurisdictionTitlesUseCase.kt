@@ -4,5 +4,5 @@ import com.zenza.teua.domain.data.JurisdictionTitle
 
 interface GetAllJurisdictionTitlesUseCase {
 
-    fun get(): List<JurisdictionTitle?>
+    fun get(): List<JurisdictionTitle>
 }

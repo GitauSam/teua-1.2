@@ -4,5 +4,5 @@ import com.zenza.teua.domain.data.Leader
 
 interface GetAllLeadersUseCase {
 
-    fun get(): List<Leader?>
+    fun get(): List<Leader>
 }
