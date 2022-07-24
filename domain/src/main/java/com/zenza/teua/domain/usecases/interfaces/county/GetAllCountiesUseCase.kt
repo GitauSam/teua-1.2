@@ -4,5 +4,5 @@ import com.zenza.teua.domain.data.County
 
 interface GetAllCountiesUseCase {
 
-    fun get(): List<County?>
+    fun get(): List<County>
 }

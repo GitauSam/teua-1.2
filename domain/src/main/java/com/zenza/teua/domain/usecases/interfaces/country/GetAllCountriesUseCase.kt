@@ -4,5 +4,5 @@ import com.zenza.teua.domain.data.Country
 
 interface GetAllCountriesUseCase {
 
-    fun get(): List<Country?>
+    fun get(): List<Country>
 }

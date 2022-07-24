@@ -23,13 +23,14 @@ class CountryEntityJpaAdapter(
         return savedCountry!!
     }
 
-    override fun getCountries(): List<Country?> {
+    override fun getCountries(): List<Country> {
 
         val countryEntities = countryEntityRepository.findAll()
 
         val countryList = mutableListOf<Country>()
 
-        countryEntities.stream().map { ce -> countryList.add(countryEntityToCountryConverter(ce)!!) }
+        countryEntities
+            .forEach { c -> countryList.add(countryEntityToCountryConverter(c)!!) }
 
         return countryList
     }

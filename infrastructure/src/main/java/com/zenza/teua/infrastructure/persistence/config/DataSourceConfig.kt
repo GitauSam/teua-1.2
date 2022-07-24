@@ -16,7 +16,7 @@ class DataSourceConfig {
     fun dataSource(): DataSource {
         val dataSourceBuilder = DataSourceBuilder.create()
         dataSourceBuilder.driverClassName("org.postgresql.Driver")
-        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/teua")
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/teua_v1")
         dataSourceBuilder.username("postgres")
         dataSourceBuilder.password("postgres")
 

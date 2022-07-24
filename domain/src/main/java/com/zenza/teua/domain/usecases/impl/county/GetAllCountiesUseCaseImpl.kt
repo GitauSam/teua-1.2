@@ -10,7 +10,7 @@ class GetAllCountiesUseCaseImpl(
     private val  countyPersistencePort: CountyPersistencePort
 ): GetAllCountiesUseCase {
 
-    override fun get(): List<County?> {
+    override fun get(): List<County> {
         return countyPersistencePort.getCounties()
     }
 }

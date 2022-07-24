@@ -4,5 +4,5 @@ import com.zenza.teua.domain.data.Ward
 
 interface GetAllWardsUseCase {
 
-    fun get(): List<Ward?>
+    fun get(): List<Ward>
 }

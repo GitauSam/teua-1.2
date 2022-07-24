@@ -8,7 +8,7 @@ class GetAllWardsUseCaseImpl(
     private val wardPersistencePort: WardPersistencePort
 ): GetAllWardsUseCase {
 
-    override fun get(): List<Ward?> {
+    override fun get(): List<Ward> {
         return wardPersistencePort.getWards()
     }
 }

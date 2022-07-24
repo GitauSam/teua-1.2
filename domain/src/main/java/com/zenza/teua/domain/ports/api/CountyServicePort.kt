@@ -8,5 +8,5 @@ interface CountyServicePort {
 
     fun getCountyById(countyId: Long): County?
 
-    fun getAllCounties(): List<County?>
+    fun getAllCounties(): List<County>
 }

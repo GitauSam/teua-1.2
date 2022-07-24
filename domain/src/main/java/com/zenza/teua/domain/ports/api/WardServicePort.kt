@@ -8,5 +8,5 @@ interface WardServicePort {
 
     fun getWardById(wardId: Long): Ward?
 
-    fun getAllWards(): List<Ward?>
+    fun getAllWards(): List<Ward>
 }

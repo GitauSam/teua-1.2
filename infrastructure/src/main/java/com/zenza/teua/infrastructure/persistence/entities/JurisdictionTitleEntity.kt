@@ -14,7 +14,7 @@ class JurisdictionTitleEntity {
     @Column(nullable = false, unique = true)
     var id: Int? = null
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50, unique = true)
     var title: String? = null
 
     @Column(nullable = false)

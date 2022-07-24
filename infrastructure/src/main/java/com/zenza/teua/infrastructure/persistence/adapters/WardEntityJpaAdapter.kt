@@ -14,20 +14,21 @@ class WardEntityJpaAdapter(
 
     override fun addWard(ward: Ward): Ward {
 
-        val wardEntity = wardEntityRepository.save(wardToWardEntityConverter(ward))
+        var wardEntity = wardToWardEntityConverter(ward)
+
+        wardEntity = wardEntityRepository.save(wardEntity)
 
         return wardEntityToWardConverter(wardEntity)!!
     }
 
-    override fun getWards(): List<Ward?> {
+    override fun getWards(): List<Ward> {
 
         val wardEntities = wardEntityRepository.findAll()
 
         val wardList = mutableListOf<Ward>()
 
         wardEntities
-            .stream()
-            .map { w -> wardList.add(wardEntityToWardConverter(w)!!) }
+            .forEach { w -> wardList.add(wardEntityToWardConverter(w)!!) }
 
         return wardList
     }

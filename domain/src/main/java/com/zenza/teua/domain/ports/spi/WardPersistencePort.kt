@@ -6,7 +6,7 @@ interface WardPersistencePort {
 
     fun addWard(ward: Ward): Ward
 
-    fun getWards(): List<Ward?>
+    fun getWards(): List<Ward>
 
     fun getWardById(wardId: Long): Ward?
 }

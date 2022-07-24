@@ -6,7 +6,7 @@ interface CountyPersistencePort {
 
     fun addCounty(county: County): County
 
-    fun getCounties(): List<County?>
+    fun getCounties(): List<County>
 
     fun getCountyById(countyId: Long): County?
 }

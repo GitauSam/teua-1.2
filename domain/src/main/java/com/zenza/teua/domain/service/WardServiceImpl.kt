@@ -20,7 +20,7 @@ class WardServiceImpl(
         return getWardByIdUseCase.get(wardId)
     }
 
-    override fun getAllWards(): List<Ward?> {
+    override fun getAllWards(): List<Ward> {
         return getAllWardsUseCase.get()
     }
 }

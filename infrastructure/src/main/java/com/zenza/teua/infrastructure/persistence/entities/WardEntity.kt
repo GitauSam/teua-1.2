@@ -14,10 +14,10 @@ class WardEntity {
     @Column(nullable = false, unique = true)
     var id: Long? = null
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 20, unique = true)
     var name: String? = null
 
-    @ManyToOne(cascade = [CascadeType.ALL])
+    @ManyToOne(cascade = [CascadeType.MERGE])
     @JoinColumn(name = "county_id", referencedColumnName = "id")
     var county: CountyEntity? = null
 

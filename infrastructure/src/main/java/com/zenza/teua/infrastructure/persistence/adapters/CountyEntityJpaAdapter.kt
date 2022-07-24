@@ -3,7 +3,7 @@ package com.zenza.teua.infrastructure.persistence.adapters
 import com.zenza.teua.domain.data.County
 import com.zenza.teua.domain.ports.spi.CountyPersistencePort
 import com.zenza.teua.infrastructure.persistence.mappers.countyEntityToCountyConverter
-import com.zenza.teua.infrastructure.persistence.mappers.countyToCountyEntityConverter
+import com.zenza.teua.infrastructure.persistence.mappers.persistCountyCountyToCountyEntityConverter
 import com.zenza.teua.infrastructure.persistence.repository.CountyEntityRepository
 import org.springframework.stereotype.Service
 
@@ -14,7 +14,7 @@ class CountyEntityJpaAdapter(
 
     override fun addCounty(county: County): County {
 
-        var countyEntity = countyToCountyEntityConverter(county)
+        var countyEntity = persistCountyCountyToCountyEntityConverter(county)
 
         countyEntity = countyEntityRepository.save(countyEntity)
 
@@ -23,13 +23,15 @@ class CountyEntityJpaAdapter(
         return savedCounty!!
     }
 
-    override fun getCounties(): List<County?> {
+    override fun getCounties(): List<County> {
 
         val countyEntities = countyEntityRepository.findAll()
 
         val countyList = mutableListOf<County>()
 
-        countyEntities.stream().map { ce -> countyEntityToCountyConverter(ce)?.let { countyList.add(it) } }
+        countyEntities.forEach {
+            c -> countyList.add(countyEntityToCountyConverter(c)!!)
+        }
 
         return countyList
     }

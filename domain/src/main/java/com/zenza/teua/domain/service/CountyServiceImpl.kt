@@ -20,7 +20,7 @@ class CountyServiceImpl(
         return getCountyByIdUseCase.get(countyId)
     }
 
-    override fun getAllCounties(): List<County?> {
+    override fun getAllCounties(): List<County> {
         return getAllCountiesUseCase.get()
     }
 }

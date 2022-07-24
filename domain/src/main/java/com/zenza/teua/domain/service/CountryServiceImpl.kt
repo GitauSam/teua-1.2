@@ -16,7 +16,7 @@ class CountryServiceImpl(
         return createCountryUseCase.create(country)
     }
 
-    override fun getCountries(): List<Country?> {
+    override fun getCountries(): List<Country> {
         return getAllCountriesUseCase.get()
     }
 

@@ -10,7 +10,7 @@ class GetAllCountriesUseCaseImpl(
     private val countryPersistencePort: CountryPersistencePort
 ): GetAllCountriesUseCase {
 
-    override fun get(): List<Country?> {
+    override fun get(): List<Country> {
         return countryPersistencePort.getCountries()
     }
 }

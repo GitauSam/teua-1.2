@@ -14,10 +14,10 @@ class CountyEntity {
     @Column(nullable = false, unique = true)
     var id: Long? = null
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 20, unique = true)
     var name: String? = null
 
-    @ManyToOne(cascade = [CascadeType.ALL])
+    @ManyToOne(cascade = [CascadeType.MERGE])
     @JoinColumn(name = "country_id", referencedColumnName = "id")
     var country: CountryEntity? = null
 

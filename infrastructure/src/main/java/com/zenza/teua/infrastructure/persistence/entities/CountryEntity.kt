@@ -14,7 +14,7 @@ class CountryEntity {
     @Column(nullable = false, unique = true)
     var id: Long? = null
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 20, unique = true)
     var name: String? = null
 
     @Column(nullable = false)

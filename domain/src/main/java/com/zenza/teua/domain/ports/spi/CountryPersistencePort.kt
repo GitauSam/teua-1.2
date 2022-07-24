@@ -6,7 +6,7 @@ interface CountryPersistencePort {
 
     fun createCountry(country: Country): Country
 
-    fun getCountries(): List<Country?>
+    fun getCountries(): List<Country>
 
     fun getCountryById(countryId: Long): Country?
 }
